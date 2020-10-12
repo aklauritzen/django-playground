@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+  
+
+{% block content %}
+
+
+<h1>{{ object.title }}</h1>
+
+
+{{ request.path }}
+
+{% if request.path == "/" %}
+    <h3>Welcome buddy</h3>
+{% else %}
+    {% include 'projects/project_details.html' with project=object %}
+{% endif %}
+
+{% endblock %}
