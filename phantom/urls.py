@@ -20,7 +20,7 @@ from projects.views import (
     home_view,
     about_view,
     contact_view,
-    project_detail_view
+    project_detail_view,    
 )
 
 urlpatterns = [
