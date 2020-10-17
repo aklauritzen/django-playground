@@ -15,8 +15,9 @@
       <ul>
         {% for object in object_list  %}
         <li>
-          {{ object.title }} -
-          {{ object.content }}
+          <strong>{{ object.title }}</strong><br>
+          <em>{{ object.created }}</em>
+          <p>{{ object.content }}</p>
         </li>
         {% endfor %}
       </ul>
