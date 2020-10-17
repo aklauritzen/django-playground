@@ -1,19 +1,26 @@
 {% extends 'base.html' %}
-
 {% block content %}
-  <h1>Ideas</h1> 
-  <p>DjangoForms are to be placed here.</p> 
-  <ul>
-      <li>Try different field types and play around with them</li>
+<section>
+  <div class="row">
+    <div class="6u 12u$(medium)">
+      <h2>Create an Idea</h2>
+      <form method="POST" action="/ideas/">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Idea</button>
+      </form>
+    </div>
+    <div class="6u 12u$(medium)">
+      <h2>Ideas Created</h2>
       <ul>
-        <li>BooleanField</li>
-        <li>CharField</li>
-        <li>DateField</li>
-        <li>EmailField</li>
-        <li>IntegerField</li>
+        {% for object in object_list  %}
+        <li>
+          {{ object.title }} -
+          {{ object.content }}
+        </li>
+        {% endfor %}
       </ul>
-  </ul>
-  <p>Ideas should be created underneath the forms.</p> 
-  
+    </div>
+  </div>
+</section>
 {% endblock %}
-    

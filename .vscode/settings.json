@@ -4,4 +4,6 @@
     // "python.linting.pylintPath": "venv/bin/pylint",
     "python.linting.pylintEnabled": false,
     "python.linting.enabled": true,
+    "python.formatting.provider": "autopep8",
+    "editor.formatOnSave": true,
 }
