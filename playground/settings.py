@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'phantom.urls'
+ROOT_URLCONF = 'playground.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'phantom.wsgi.application'
+WSGI_APPLICATION = 'playground.wsgi.application'
 
 
 # Database

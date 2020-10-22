@@ -6,8 +6,6 @@ from projects.views import (
 
     # TODO: Should be places in a seperate view
     home_view,
-    about_view,
-    contact_view
 )
 
 from ideas.views import (
@@ -18,8 +16,6 @@ from ideas.views import (
 
 urlpatterns = [
     path('', home_view),
-    path('about/', about_view),
-    path('contact/', contact_view),
     path('ideas/', idea_create_view),
     path('projects/<int:pk>/', project_detail_view),  # pk = primary key
     path('admin/', admin.site.urls),

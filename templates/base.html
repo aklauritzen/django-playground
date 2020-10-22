@@ -1,117 +1,47 @@
 {% load static %}
 
-<!DOCTYPE HTML>
-<!--
-	Phantom by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
--->
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-	<title>{% block title %}Django Phantom{% endblock %}</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!--[if lte IE 8]><script src="{% static '/assets/js/ie/html5shiv.js' %}"></script><![endif]-->
-	<link rel="stylesheet" href="{% static '/assets/css/main.css' %}" />
-	<!--[if lte IE 9]><link rel="stylesheet" href="{% static '/assets/css/ie9.css' %}" /><![endif]-->
-	<!--[if lte IE 8]><link rel="stylesheet" href="{% static '/assets/css/ie8.css' %}" /><![endif]-->
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+	<title>{% block title %}Django Playground{% endblock %}</title>
 </head>
 
 <body>
-	<!-- Wrapper -->
-	<div id="wrapper">
+
+	<div class="container">
 
 		<!-- Header -->
-		<header id="header">
-			<div class="inner">
-
-				<!-- Logo -->
-				<a href="/" class="logo">
-					<span class="symbol"><img src="{% static 'images/logo.svg' %}" alt="" /></span><span
-						class="title">Phantom</span>
-				</a>
-
-				<!-- Nav -->
-				<nav>
-					<ul>
-						<li><a href="#menu">Menu</a></li>
-					</ul>
-				</nav>
-
-			</div>
-		</header>
+		<h1>Django Playground</h1>
 
 		<!-- Menu -->
-		<nav id="menu">
-			<h2>Menu</h2>
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/about/">About</a></li>
-				<li><a href="/contact/">Contact</a></li>
-			</ul>
-		</nav>
-
+		<ul class="nav">
+			<li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+			<li class="nav-item"><a class="nav-link active" href="/ideas/">Django Forms</a></li>
+		</ul>
 
 		<!-- Main -->
-		<div id="main">
-			<div class="inner">
-				{% block content %}
-				{% endblock %}
+		{% block content %}
+		{% endblock %}
 
-				{% block js %}
-				{% endblock %}
-			</div>
-		</div>
-
-		<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<section>
-					<h2>Get in touch</h2>
-					<form method="post" action="#">
-						<div class="field half first">
-							<input type="text" name="name" id="name" placeholder="Name" />
-						</div>
-						<div class="field half">
-							<input type="email" name="email" id="email" placeholder="Email" />
-						</div>
-						<div class="field">
-							<textarea name="message" id="message" placeholder="Message"></textarea>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send" class="special" /></li>
-						</ul>
-					</form>
-				</section>
-				<section>
-					<h2>Follow</h2>
-					<ul class="icons">
-						<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-						<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
-						<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-				</section>
-				<ul class="copyright">
-					<li>&copy; Untitled. All rights reserved</li>
-				</ul>
-			</div>
-		</footer>
-
+		{% block js %}
+		{% endblock %}
 	</div>
 
-	<!-- Scripts -->
-	<script src="{% static '/assets/js/jquery.min.js' %}"></script>
-	<script src="{% static '/assets/js/skel.min.js' %}"></script>
-	<script src="{% static '/assets/js/util.js' %}"></script>
-	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-	<script src="{% static '/assets/js/main.js' %}"></script>
-
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+	</script>
 </body>
 
 </html>
