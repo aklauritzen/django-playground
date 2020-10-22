@@ -22,10 +22,24 @@
 		<!-- Header -->
 		<h1>Django Playground</h1>
 
+		<!-- User info -->
+		{% block user %}
+			
+			{% if request.user.is_anonymous %}
+			<p>You are not logged in. Go to <a href="/login/">login</a> or <a href="/register/">register</a></p>
+			{% else%}
+			<p>You are logged in as: {{ user }} - <a href="/logout/">logout</a></p>
+			{% endif %}
+
+		{% endblock user %}
+			
+
 		<!-- Menu -->
 		<ul class="nav">
 			<li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
-			<li class="nav-item"><a class="nav-link active" href="/ideas/">Django Forms</a></li>
+			<li class="nav-item"><a class="nav-link active" href="/ideas/">Ideas</a></li>
+			<li class="nav-item"><a class="nav-link active" href="/create_idea/">Create Idea</a></li>
+			<li class="nav-item"><a class="nav-link active" href="/admin/">Admin</a></li>
 		</ul>
 
 		<!-- Main -->

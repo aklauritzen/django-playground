@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+   
+      <h2>Create an Idea</h2>
+      <form method="POST" action="/ideas/">
+        <div class="form-group">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-primary">Create Idea</button>
+        </div>
+      </form>    
+ 
+</div>
+
+{% endblock %}

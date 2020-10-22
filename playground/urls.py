@@ -8,6 +8,12 @@ from projects.views import (
     home_view,
 )
 
+from accounts.views import (
+    login_view,
+    logout_view,
+    register_view
+)
+
 from ideas.views import (
     ideas_view,
     idea_create_view,
@@ -16,7 +22,11 @@ from ideas.views import (
 
 urlpatterns = [
     path('', home_view),
-    path('ideas/', idea_create_view),
+    path('login/', login_view),
+    path('logout/', logout_view),
+    path('register/', register_view),
+    path('ideas/', ideas_view),
+    path('create_idea/', idea_create_view),
     path('projects/<int:pk>/', project_detail_view),  # pk = primary key
     path('admin/', admin.site.urls),
 ]

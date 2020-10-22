@@ -2,32 +2,18 @@
 {% block content %}
 
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <h2>Create an Idea</h2>
-      <form method="POST" action="/ideas/">
-        <div class="form-group">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit" class="btn btn-primary">Create Idea</button>
-        </div>
-      </form>
-    </div>
-
-    <div class="col">
-      <h2>Ideas Created</h2>
+      <h2>Ideas</h2>
 
       {% for object in object_list  %}
       <div class="card" style="width: 24rem;">
         <div class="card-body">
           <h5 class="card-title">{{ object.title }}</h5>
-          <p class="card-subtitle mb-2 text-muted">{{ object.created }}</p>
+          <p class="card-subtitle mb-2 text-muted">{{ object.created }} - By: {{ object.user }}</p>
           <p class="card-text">{{ object.content }}</p>
         </div>
       </div>
       {% endfor %}
-
-    </div>
+         
   </div>
 </div>
 
