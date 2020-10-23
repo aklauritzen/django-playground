@@ -3,7 +3,6 @@ from .models import Idea
 
 # Creates a DjangoForm
 
-
 class IdeaModelForm(forms.ModelForm):
     class Meta:
         model = Idea

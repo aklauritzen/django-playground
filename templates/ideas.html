@@ -4,14 +4,16 @@
 <div class="container">
       <h2>Ideas</h2>
 
-      {% for object in object_list  %}
-      <div class="card" style="width: 24rem;">
+      {% for object in object_list %}
+      
+      <div class="card" style="width: 24rem; margin-top: 1rem;">
         <div class="card-body">
           <h5 class="card-title">{{ object.title }}</h5>
           <p class="card-subtitle mb-2 text-muted">{{ object.created }} - By: {{ object.user }}</p>
           <p class="card-text">{{ object.content }}</p>
         </div>
-      </div>
+      
+    </div>
       {% endfor %}
          
   </div>
