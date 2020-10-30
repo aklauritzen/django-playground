@@ -21,7 +21,7 @@ def idea_create_view(request, *args, **kwargs):
         print("Form is VALID")
         obj = form.save(commit=False)
         
-        # Add current logged in user to object
+        # Assign current logged in user to object
         obj.user = request.user
         
         obj.save()

@@ -7,7 +7,6 @@ from .forms import LoginForm, RegisterForm
 
 User = get_user_model()
 
-
 def register_view(request):
     form = RegisterForm(request.POST or None)
     if form.is_valid():
